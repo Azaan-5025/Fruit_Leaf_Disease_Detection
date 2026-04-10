@@ -13,7 +13,7 @@ from docx.shared import Inches as DI, Pt, RGBColor, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 
-OUTFILE = "Project_Report_v2.docx"
+OUTFILE = "Project_Report_v3.docx"
 EDA_DIR = "eda_outputs"
 RESULTS_DIR = "results"
 
@@ -594,11 +594,24 @@ history = model.fit(
     # 12 REFERENCES
     # =========================================================
     heading("12 References", 1)
-    para("References include work by Mohanty et al in 2016 on deep learning for plant diseases in Frontiers in Plant Science. Then Too et al in 2019 comparing fine-tuning models in Computers and Electronics in Agriculture. Brahimi et al in 2017 on tomato diseases. Ferentinos in 2018 on deep models for detection. Sandler et al in 2018 on MobileNetV2 in CVPR. He et al in 2016 on ResNet in CVPR. Datasets from Kaggle, PlantVillage and Fruits Disease. And the GitHub repo at github.com/Azaan-5025/Fruit_Leaf_Disease_Detection.")
+    refs = [
+        "[1] S. P. Mohanty, D. P. Hughes, and M. Salathe, \"Using deep learning for image-based plant disease detection,\" Frontiers in Plant Science, vol. 7, p. 1419, 2016.",
+        "[2] E. C. Too, L. Yujian, S. Njuki, and L. Yingchun, \"A comparative study of fine-tuning deep learning models for plant disease identification,\" Computers and Electronics in Agriculture, vol. 161, pp. 272-279, 2019.",
+        "[3] M. Brahimi, K. Boukhalfa, and A. Moussaoui, \"Deep learning for tomato diseases: Classification and symptoms visualization,\" Applied Artificial Intelligence, vol. 31, no. 4, pp. 299-315, 2017.",
+        "[4] K. P. Ferentinos, \"Deep learning models for plant disease detection and diagnosis,\" Computers and Electronics in Agriculture, vol. 145, pp. 311-318, 2018.",
+        "[5] M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, \"MobileNetV2: Inverted residuals and linear bottlenecks,\" in Proceedings of CVPR, pp. 4510-4520, 2018.",
+        "[6] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proceedings of CVPR, pp. 770-778, 2016.",
+        "[7] PlantVillage Dataset, Kaggle, https://www.kaggle.com/datasets/emmarex/plantdisease",
+        "[8] Fruits Disease Dataset, Kaggle, https://www.kaggle.com/datasets/sriramr/fruits-diseases",
+        "Project Repository: https://github.com/Azaan-5025/Fruit_Leaf_Disease_Detection"
+    ]
+    for ref in refs:
+        para(ref)
     
     # Save
     doc.save(OUTFILE)
     print(f"\n✅ Report saved: {OUTFILE}")
+
 
 
 if __name__ == "__main__":
