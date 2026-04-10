@@ -26,7 +26,7 @@ from pptx.enum.shapes import MSO_SHAPE
 # ============================================================
 STUDENT_NAME = "Syed Azaan Hussain"   # <-- Your name
 REGISTER_NO  = "24BCE5025"
-OUTPUT_FILE  = "DS_Project_Review.pptx"
+OUTPUT_FILE  = "DS_Project_Review_v2.pptx"
 
 # Color palette
 BG_DARK   = RGBColor(0x1B, 0x1B, 0x2F)
@@ -539,23 +539,23 @@ def build_slide_4_eda(prs):
 
 
 def build_slide_5_preprocessing(prs):
-    """Slide 5: Data Pre-Processing & EDA Output"""
+    """Slide 5: Data Pre-Processing Pipeline"""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_slide_bg(slide)
     add_accent_line(slide, Inches(0), Inches(0), SLIDE_W)
 
     add_text_box(slide, Inches(0.5), Inches(0.3), Inches(12), Inches(0.7),
-                 "Data Pre-Processing & EDA Output", font_size=30, bold=True, color=ACCENT)
+                 "Data Pre-Processing Pipeline", font_size=30, bold=True, color=ACCENT)
 
     # Pipeline diagram
     pipeline_path = generate_preprocessing_pipeline_chart()
     if pipeline_path and os.path.exists(pipeline_path):
-        slide.shapes.add_picture(pipeline_path, Inches(0.5), Inches(1.1), Inches(12), Inches(2.5))
+        slide.shapes.add_picture(pipeline_path, Inches(0.5), Inches(1.1), Inches(12), Inches(2.8))
 
-    # Pre-processing code
-    add_rounded_rect(slide, Inches(0.5), Inches(3.8), Inches(6), Inches(3.3))
-    tf = add_text_box(slide, Inches(0.8), Inches(3.9), Inches(5.5), Inches(0.5),
-                      "Preprocessing Code", font_size=16, bold=True, color=ACCENT)
+    # Pre-processing code — full slide width
+    add_rounded_rect(slide, Inches(0.5), Inches(4.1), Inches(6), Inches(3.1))
+    tf = add_text_box(slide, Inches(0.8), Inches(4.2), Inches(5.5), Inches(0.5),
+                      "Sakaguchi Preprocessing Code", font_size=18, bold=True, color=ACCENT)
 
     code = (
         "def preprocess_pipeline(image_file):\n"
@@ -575,73 +575,175 @@ def build_slide_5_preprocessing(prs):
         "  }\n"
         "  return normalized, tensors"
     )
-    add_paragraph(tf, code, font_size=9, color=LIGHT)
+    add_paragraph(tf, code, font_size=10, color=LIGHT)
 
-    # Data Augmentation box
-    add_rounded_rect(slide, Inches(6.8), Inches(3.8), Inches(6), Inches(3.3))
-    tf2 = add_text_box(slide, Inches(7.1), Inches(3.9), Inches(5.5), Inches(0.5),
-                       "Data Augmentation & EDA", font_size=16, bold=True, color=ACCENT)
-    add_paragraph(tf2, "Training-Time Augmentation:", font_size=14, bold=True, color=WHITE)
-    add_paragraph(tf2, "• Rotation: ±20°", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Zoom: 15%", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Width/Height Shift: 20%", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Shear: 15%", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Horizontal Flip: Enabled", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "", font_size=6, color=LIGHT)
-    add_paragraph(tf2, "Preprocessing Pipeline Analysis:", font_size=14, bold=True, color=WHITE)
-    add_paragraph(tf2, "• Resize before smoothing maintains kernel consistency", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Sakaguchi tensors capture multi-scale features", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• 80/20 train/validation split applied", font_size=12, color=LIGHT)
+    # Pipeline description box
+    add_rounded_rect(slide, Inches(6.8), Inches(4.1), Inches(6), Inches(3.1))
+    tf2 = add_text_box(slide, Inches(7.1), Inches(4.2), Inches(5.5), Inches(0.5),
+                       "Pipeline Steps Explained", font_size=18, bold=True, color=ACCENT)
+    add_paragraph(tf2, "Step 1 — Load Image:", font_size=13, bold=True, color=WHITE)
+    add_paragraph(tf2, "  Read image from upload, convert BGR → RGB", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "Step 2 — Resize:", font_size=13, bold=True, color=WHITE)
+    add_paragraph(tf2, "  Standardize to 224×224 for model input", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "Step 3 — Gaussian Smoothing:", font_size=13, bold=True, color=WHITE)
+    add_paragraph(tf2, "  5×5 kernel removes noise artifacts", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "Step 4 — Normalize:", font_size=13, bold=True, color=WHITE)
+    add_paragraph(tf2, "  Scale pixel values from [0,255] → [0,1]", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "Step 5 — Sakaguchi Tensors:", font_size=13, bold=True, color=WHITE)
+    add_paragraph(tf2, "  Generate 8×8, 12×12, 16×16 multi-scale features", font_size=12, color=LIGHT)
 
 
-def build_slide_6_methodology(prs):
-    """Slide 6: Methodology Planned & Expected Prediction Output"""
+def build_slide_6_augmentation(prs):
+    """Slide 6: Data Augmentation & Pre-Processing EDA Output"""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_slide_bg(slide)
     add_accent_line(slide, Inches(0), Inches(0), SLIDE_W)
 
     add_text_box(slide, Inches(0.5), Inches(0.3), Inches(12), Inches(0.7),
-                 "Methodology & Expected Prediction Output", font_size=28, bold=True, color=ACCENT)
+                 "Data Augmentation & Pre-Processing EDA Output", font_size=28, bold=True, color=ACCENT)
+
+    # Augmentation card
+    add_rounded_rect(slide, Inches(0.5), Inches(1.2), Inches(6), Inches(5.5))
+    tf = add_text_box(slide, Inches(0.8), Inches(1.3), Inches(5.5), Inches(0.5),
+                      "Training-Time Data Augmentation", font_size=20, bold=True, color=ACCENT)
+    add_paragraph(tf, "Applied via Keras ImageDataGenerator:", font_size=14, bold=True, color=WHITE)
+    add_paragraph(tf, "", font_size=6, color=LIGHT)
+    add_paragraph(tf, "• Rotation Range: ±20°", font_size=14, color=LIGHT)
+    add_paragraph(tf, "  → Handles images taken at different angles", font_size=11, color=LIGHT)
+    add_paragraph(tf, "• Zoom Range: 15%", font_size=14, color=LIGHT)
+    add_paragraph(tf, "  → Simulates varying camera distances", font_size=11, color=LIGHT)
+    add_paragraph(tf, "• Width/Height Shift: 20%", font_size=14, color=LIGHT)
+    add_paragraph(tf, "  → Handles off-center subjects", font_size=11, color=LIGHT)
+    add_paragraph(tf, "• Shear Range: 15%", font_size=14, color=LIGHT)
+    add_paragraph(tf, "  → Adds perspective distortion", font_size=11, color=LIGHT)
+    add_paragraph(tf, "• Horizontal Flip: Enabled", font_size=14, color=LIGHT)
+    add_paragraph(tf, "  → Doubles effective dataset size", font_size=11, color=LIGHT)
+    add_paragraph(tf, "", font_size=6, color=LIGHT)
+    add_paragraph(tf, "Augmentation prevents overfitting and improves", font_size=13, color=GREEN)
+    add_paragraph(tf, "generalization on unseen disease images.", font_size=13, color=GREEN)
+
+    # Pre-processing EDA output card
+    add_rounded_rect(slide, Inches(6.8), Inches(1.2), Inches(6), Inches(5.5))
+    tf2 = add_text_box(slide, Inches(7.1), Inches(1.3), Inches(5.5), Inches(0.5),
+                       "Pre-Processing EDA Findings", font_size=20, bold=True, color=ACCENT)
+    add_paragraph(tf2, "Image Statistics (after preprocessing):", font_size=14, bold=True, color=WHITE)
+    add_paragraph(tf2, "", font_size=6, color=LIGHT)
+    add_paragraph(tf2, "• Input Resolution: 224 × 224 × 3 (RGB)", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "• Pixel Range: [0.0, 1.0] after normalization", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "• Gaussian Blur Kernel: 5 × 5", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "• Batch Size: 32 images per iteration", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "", font_size=6, color=LIGHT)
+    add_paragraph(tf2, "Sakaguchi Tensor Output Shapes:", font_size=14, bold=True, color=WHITE)
+    add_paragraph(tf2, "  • Tensor 1:  8 × 8 × 3   =    192 features", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "  • Tensor 2: 12 × 12 × 3  =    432 features", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "  • Tensor 3: 16 × 16 × 3  =    768 features", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "", font_size=6, color=LIGHT)
+    add_paragraph(tf2, "Key Insight:", font_size=14, bold=True, color=WHITE)
+    add_paragraph(tf2, "Resize → Blur order ensures the 5×5 kernel", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "has consistent relative effect across all images,", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "matching training and inference pipelines.", font_size=12, color=LIGHT)
+
+
+def build_slide_7_methodology(prs):
+    """Slide 7: Methodology & Model Architecture"""
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    set_slide_bg(slide)
+    add_accent_line(slide, Inches(0), Inches(0), SLIDE_W)
+
+    add_text_box(slide, Inches(0.5), Inches(0.3), Inches(12), Inches(0.7),
+                 "Methodology & Model Architecture", font_size=30, bold=True, color=ACCENT)
 
     # Architecture diagram
     methodology_path = generate_methodology_diagram()
     if methodology_path and os.path.exists(methodology_path):
-        slide.shapes.add_picture(methodology_path, Inches(0.3), Inches(1.0), Inches(7.5), Inches(3.5))
+        slide.shapes.add_picture(methodology_path, Inches(0.3), Inches(1.1), Inches(8), Inches(4.0))
+
+    # Model details card
+    add_rounded_rect(slide, Inches(8.5), Inches(1.1), Inches(4.5), Inches(6.0))
+    tf = add_text_box(slide, Inches(8.8), Inches(1.2), Inches(4.0), Inches(0.5),
+                      "4 Models Compared", font_size=20, bold=True, color=ACCENT)
+
+    add_paragraph(tf, "1. CNN (MobileNetV2)", font_size=14, bold=True, color=GREEN)
+    add_paragraph(tf, "   Transfer learning, frozen base", font_size=11, color=LIGHT)
+    add_paragraph(tf, "   + GlobalAvgPool + Dense(256)", font_size=11, color=LIGHT)
+    add_paragraph(tf, "", font_size=4, color=LIGHT)
+
+    add_paragraph(tf, "2. ANN (MLP)", font_size=14, bold=True, color=ORANGE)
+    add_paragraph(tf, "   Flatten + Dense(1024→512→256→128)", font_size=11, color=LIGHT)
+    add_paragraph(tf, "   BatchNorm + Dropout(0.5)", font_size=11, color=LIGHT)
+    add_paragraph(tf, "", font_size=4, color=LIGHT)
+
+    add_paragraph(tf, "3. ResNet50", font_size=14, bold=True, color=ACCENT)
+    add_paragraph(tf, "   Fine-tuned top 50 layers", font_size=11, color=LIGHT)
+    add_paragraph(tf, "   + Dense(512→256) + BatchNorm", font_size=11, color=LIGHT)
+    add_paragraph(tf, "", font_size=4, color=LIGHT)
+
+    add_paragraph(tf, "4. SVM", font_size=14, bold=True, color=RED)
+    add_paragraph(tf, "   MobileNetV2 feature extractor", font_size=11, color=LIGHT)
+    add_paragraph(tf, "   + RBF kernel SVM (C=10)", font_size=11, color=LIGHT)
+    add_paragraph(tf, "", font_size=6, color=LIGHT)
+
+    add_paragraph(tf, "All models use multi-input:", font_size=12, bold=True, color=WHITE)
+    add_paragraph(tf, "224×224 image + 3 Sakaguchi tensors", font_size=11, color=GREEN)
+
+    # Training config card
+    add_rounded_rect(slide, Inches(0.3), Inches(5.3), Inches(8), Inches(1.8))
+    tf2 = add_text_box(slide, Inches(0.6), Inches(5.4), Inches(7.5), Inches(0.5),
+                       "Training Configuration", font_size=18, bold=True, color=ACCENT)
+    add_paragraph(tf2,
+        "Optimizer: Adam  |  Loss: Categorical Cross-Entropy  |  Callbacks: EarlyStopping, ReduceLR, ModelCheckpoint",
+        font_size=13, color=LIGHT)
+    add_paragraph(tf2,
+        "Epochs: 20 (with early stopping)  |  Batch Size: 32  |  Validation Split: 20%",
+        font_size=13, color=LIGHT)
+
+
+def build_slide_8_results(prs):
+    """Slide 8: Expected Prediction Output & Conclusion"""
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    set_slide_bg(slide)
+    add_accent_line(slide, Inches(0), Inches(0), SLIDE_W)
+
+    add_text_box(slide, Inches(0.5), Inches(0.3), Inches(12), Inches(0.7),
+                 "Expected Prediction Output & Conclusion", font_size=28, bold=True, color=ACCENT)
 
     # Model comparison chart
     comp_path = generate_model_comparison_chart()
     if comp_path and os.path.exists(comp_path):
-        slide.shapes.add_picture(comp_path, Inches(0.3), Inches(4.6), Inches(6), Inches(2.7))
-
-    # Expected output card
-    add_rounded_rect(slide, Inches(8.0), Inches(1.0), Inches(5), Inches(3.0))
-    tf = add_text_box(slide, Inches(8.3), Inches(1.1), Inches(4.5), Inches(0.5),
-                      "Multi-Model Architecture", font_size=16, bold=True, color=ACCENT)
-    add_paragraph(tf, "4 Models trained & compared:", font_size=13, bold=True, color=WHITE)
-    add_paragraph(tf, "  1. CNN (MobileNetV2) — Transfer Learning", font_size=12, color=LIGHT)
-    add_paragraph(tf, "  2. ANN (MLP) — Dense Network", font_size=12, color=LIGHT)
-    add_paragraph(tf, "  3. ResNet50 — Deep Residual Network", font_size=12, color=LIGHT)
-    add_paragraph(tf, "  4. SVM — Feature Extraction + Classification", font_size=12, color=LIGHT)
-    add_paragraph(tf, "", font_size=6, color=LIGHT)
-    add_paragraph(tf, "Multi-Input: 224x224 + Sakaguchi tensors", font_size=12, color=GREEN)
-
-    # Expected prediction output
-    add_rounded_rect(slide, Inches(8.0), Inches(4.3), Inches(5), Inches(3.0))
-    tf2 = add_text_box(slide, Inches(8.3), Inches(4.4), Inches(4.5), Inches(0.5),
-                       "Expected Prediction Output", font_size=16, bold=True, color=ACCENT)
-    add_paragraph(tf2, "For each uploaded image, the system outputs:", font_size=13, color=WHITE)
-    add_paragraph(tf2, "• Disease Name (e.g., Tomato Late Blight)", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Confidence Score (e.g., 92.3%)", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Health Status (Healthy / Diseased)", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "• Top-3 predictions with probability bars", font_size=12, color=LIGHT)
-    add_paragraph(tf2, "", font_size=6, color=LIGHT)
-    add_paragraph(tf2, "Target: 85%+ validation accuracy", font_size=13, bold=True, color=GREEN)
-    add_paragraph(tf2, "Best Model: CNN (MobileNetV2) @ 85.1%", font_size=12, color=GREEN)
+        slide.shapes.add_picture(comp_path, Inches(0.3), Inches(1.1), Inches(6.5), Inches(3.2))
 
     # Training curves
     curves_path = generate_training_curves_chart()
     if curves_path and os.path.exists(curves_path):
-        slide.shapes.add_picture(curves_path, Inches(6.5), Inches(4.6), Inches(6.5), Inches(2.7))
+        slide.shapes.add_picture(curves_path, Inches(0.3), Inches(4.5), Inches(6.5), Inches(2.8))
+
+    # Expected prediction output card
+    add_rounded_rect(slide, Inches(7.0), Inches(1.1), Inches(6), Inches(3.0))
+    tf = add_text_box(slide, Inches(7.3), Inches(1.2), Inches(5.5), Inches(0.5),
+                      "Expected Prediction Output", font_size=20, bold=True, color=ACCENT)
+    add_paragraph(tf, "For each uploaded image, the system outputs:", font_size=14, color=WHITE)
+    add_paragraph(tf, "", font_size=4, color=LIGHT)
+    add_paragraph(tf, "• Disease Name (e.g., Tomato Late Blight)", font_size=13, color=LIGHT)
+    add_paragraph(tf, "• Confidence Score (e.g., 92.3%)", font_size=13, color=LIGHT)
+    add_paragraph(tf, "• Health Status: Healthy / Diseased", font_size=13, color=LIGHT)
+    add_paragraph(tf, "• Top-3 predictions with probability bars", font_size=13, color=LIGHT)
+    add_paragraph(tf, "• Sakaguchi tensor metadata", font_size=13, color=LIGHT)
+    add_paragraph(tf, "", font_size=4, color=LIGHT)
+    add_paragraph(tf, "Best Model: CNN (MobileNetV2) @ 85.1%", font_size=14, bold=True, color=GREEN)
+
+    # Conclusion card
+    add_rounded_rect(slide, Inches(7.0), Inches(4.4), Inches(6), Inches(2.9))
+    tf2 = add_text_box(slide, Inches(7.3), Inches(4.5), Inches(5.5), Inches(0.5),
+                       "Conclusion", font_size=20, bold=True, color=ACCENT)
+    add_paragraph(tf2, "• Multi-input architecture with Sakaguchi tensors", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "  enhances feature extraction at multiple scales.", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "• CNN (MobileNetV2) achieves best accuracy (85%+)", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "  with efficient transfer learning.", font_size=12, color=LIGHT)
+    add_paragraph(tf2, "• SVM provides a strong non-DL baseline (82%).", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "• Streamlit web app enables real-time diagnosis.", font_size=13, color=LIGHT)
+    add_paragraph(tf2, "", font_size=6, color=LIGHT)
+    add_paragraph(tf2, "Thank You!", font_size=22, bold=True, color=ACCENT,
+                  alignment=PP_ALIGN.CENTER)
 
 
 # ============================================================
@@ -666,11 +768,17 @@ def main():
     print("  Building Slide 4: EDA Code & Output...")
     build_slide_4_eda(prs)
 
-    print("  Building Slide 5: Data Pre-Processing...")
+    print("  Building Slide 5: Data Pre-Processing Pipeline...")
     build_slide_5_preprocessing(prs)
 
-    print("  Building Slide 6: Methodology & Expected Output...")
-    build_slide_6_methodology(prs)
+    print("  Building Slide 6: Data Augmentation & Pre-Processing EDA...")
+    build_slide_6_augmentation(prs)
+
+    print("  Building Slide 7: Methodology & Model Architecture...")
+    build_slide_7_methodology(prs)
+
+    print("  Building Slide 8: Expected Output & Conclusion...")
+    build_slide_8_results(prs)
 
     prs.save(OUTPUT_FILE)
     print(f"\n✅ Presentation saved: {OUTPUT_FILE}")
