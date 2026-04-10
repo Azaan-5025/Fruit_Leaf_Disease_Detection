@@ -1,0 +1,1837 @@
+﻿python : 2026-02-21 
+12:25:56.109721: I tensorfl
+ow/core/util/port.cc:153] 
+oneDNN custom operations 
+are on. You may see 
+slightly different 
+numerical results due to 
+floating-point round-off 
+errors from different 
+computation orders. To 
+turn them off, set the 
+environment variable 
+`TF_ENABLE_ONEDNN_OPTS=0`.
+At line:1 char:1
++ python src/train.py 
+--data_dir 
+data/training_data 
+--epochs 1 2>&1 | O ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (202  
+  6-02-21 12:2...ONEDNN_   
+ OPTS=0`.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 49, in 
+<module>
+    from 
+tensorflow._api.v2 import 
+__internal__
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+api\v2\__internal__\__init_
+_.py", line 13, in <module>
+    from tensorflow._api.v2
+.__internal__ import 
+feature_column
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+api\v2\__internal__\feature
+_column\__init__.py", line 
+8, in <module>
+    from tensorflow.python.
+feature_column.feature_colu
+mn_v2 import DenseColumn # 
+line: 1777
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\feature_column\featur
+e_column_v2.py", line 38, 
+in <module>
+    from tensorflow.python.
+feature_column import 
+feature_column as fc_old
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\feature_column\featur
+e_column.py", line 41, in 
+<module>
+    from 
+tensorflow.python.layers 
+import base
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\layers\base.py", 
+line 16, in <module>
+    from tensorflow.python.
+keras.legacy_tf_layers 
+import base
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\__init__.py", 
+line 25, in <module>
+    from 
+tensorflow.python.keras 
+import models
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\models.py", 
+line 25, in <module>
+    from tensorflow.python.
+keras.engine import 
+training_v1
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\engine\training
+_v1.py", line 46, in 
+<module>
+    from tensorflow.python.
+keras.engine import 
+training_arrays_v1
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\engine\training
+_arrays_v1.py", line 37, 
+in <module>
+    from scipy.sparse 
+import issparse  # pylint: 
+disable=g-import-not-at-top
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\__init__.py", line 295, 
+in <module>
+    from ._csr import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\_csr.py", line 11, in 
+<module>
+    from ._sparsetools 
+import (csr_tocsc, 
+csr_tobsr, 
+csr_count_blocks,
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 49, in 
+<module>
+    from 
+tensorflow._api.v2 import 
+__internal__
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+api\v2\__internal__\__init_
+_.py", line 13, in <module>
+    from tensorflow._api.v2
+.__internal__ import 
+feature_column
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+api\v2\__internal__\feature
+_column\__init__.py", line 
+8, in <module>
+    from tensorflow.python.
+feature_column.feature_colu
+mn_v2 import DenseColumn # 
+line: 1777
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\feature_column\featur
+e_column_v2.py", line 38, 
+in <module>
+    from tensorflow.python.
+feature_column import 
+feature_column as fc_old
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\feature_column\featur
+e_column.py", line 41, in 
+<module>
+    from 
+tensorflow.python.layers 
+import base
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\layers\base.py", 
+line 16, in <module>
+    from tensorflow.python.
+keras.legacy_tf_layers 
+import base
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\__init__.py", 
+line 25, in <module>
+    from 
+tensorflow.python.keras 
+import models
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\models.py", 
+line 25, in <module>
+    from tensorflow.python.
+keras.engine import 
+training_v1
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\p
+ython\keras\engine\training
+_v1.py", line 71, in 
+<module>
+    from scipy.sparse 
+import issparse  # pylint: 
+disable=g-import-not-at-top
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\__init__.py", line 295, 
+in <module>
+    from ._csr import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\_csr.py", line 11, in 
+<module>
+    from ._sparsetools 
+import (csr_tocsc, 
+csr_tobsr, 
+csr_count_blocks,
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+2026-02-21 
+12:26:00.872840: I tensorfl
+ow/core/util/port.cc:153] 
+oneDNN custom operations 
+are on. You may see 
+slightly different 
+numerical results due to 
+floating-point round-off 
+errors from different 
+computation orders. To 
+turn them off, set the 
+environment variable 
+`TF_ENABLE_ONEDNN_OPTS=0`.
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 7, in <module>
+    from keras import 
+activations as activations
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\activa
+tions\__init__.py", line 
+7, in <module>
+    from 
+keras.src.activations 
+import deserialize as 
+deserialize
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\__
+init__.py", line 7, in 
+<module>
+    from keras.src import 
+layers
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\la
+yers\__init__.py", line 
+185, in <module>
+    from keras.src.layers.p
+reprocessing.normalization 
+import Normalization
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\la
+yers\preprocessing\normaliz
+ation.py", line 9, in 
+<module>
+    from keras.src.trainers
+.data_adapters.py_dataset_a
+dapter import PyDataset
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\__init
+__.py", line 4, in <module>
+    from keras.src.trainers
+.data_adapters import 
+array_data_adapter
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\array_
+data_adapter.py", line 7, 
+in <module>
+    from keras.src.trainers
+.data_adapters import 
+array_slicing
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\array_
+slicing.py", line 12, in 
+<module>
+    import pandas
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\__ini
+t__.py", line 26, in 
+<module>
+    from pandas.compat 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\compa
+t\__init__.py", line 27, 
+in <module>
+    from 
+pandas.compat.pyarrow 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\compa
+t\pyarrow.py", line 8, in 
+<module>
+    import pyarrow as pa
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pyarrow\__in
+it__.py", line 65, in 
+<module>
+    import pyarrow.lib as 
+_lib
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 7, in <module>
+    from keras import 
+activations as activations
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\activa
+tions\__init__.py", line 
+7, in <module>
+    from 
+keras.src.activations 
+import deserialize as 
+deserialize
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\__
+init__.py", line 7, in 
+<module>
+    from keras.src import 
+layers
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\la
+yers\__init__.py", line 
+185, in <module>
+    from keras.src.layers.p
+reprocessing.normalization 
+import Normalization
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\la
+yers\preprocessing\normaliz
+ation.py", line 9, in 
+<module>
+    from keras.src.trainers
+.data_adapters.py_dataset_a
+dapter import PyDataset
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\__init
+__.py", line 4, in <module>
+    from keras.src.trainers
+.data_adapters import 
+array_data_adapter
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\array_
+data_adapter.py", line 7, 
+in <module>
+    from keras.src.trainers
+.data_adapters import 
+array_slicing
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\array_
+slicing.py", line 12, in 
+<module>
+    import pandas
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\__ini
+t__.py", line 49, in 
+<module>
+    from pandas.core.api 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\core\
+api.py", line 1, in 
+<module>
+    from pandas._libs 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\pandas\_libs
+\__init__.py", line 17, in 
+<module>
+    import pandas._libs.pan
+das_datetime  # noqa: F401 
+# isort: skip # type: 
+ignore[reportUnusedImport]
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 7, in <module>
+    from keras import 
+activations as activations
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\activa
+tions\__init__.py", line 
+7, in <module>
+    from 
+keras.src.activations 
+import deserialize as 
+deserialize
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\__
+init__.py", line 13, in 
+<module>
+    from keras.src import 
+visualization
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\vi
+sualization\__init__.py", 
+line 2, in <module>
+    from 
+keras.src.visualization 
+import plot_image_gallery
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\vi
+sualization\plot_image_gall
+ery.py", line 13, in 
+<module>
+    import 
+matplotlib.pyplot as plt
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\_
+_init__.py", line 159, in 
+<module>
+    from . import _api, 
+_version, cbook, 
+_docstring, rcsetup
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\r
+csetup.py", line 28, in 
+<module>
+    from matplotlib.colors 
+import Colormap, 
+is_color_like
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\c
+olors.py", line 57, in 
+<module>
+    from matplotlib import 
+_api, _cm, cbook, scale
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\s
+cale.py", line 22, in 
+<module>
+    from matplotlib.ticker 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\t
+icker.py", line 144, in 
+<module>
+    from matplotlib import 
+transforms as mtransforms
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\t
+ransforms.py", line 49, in 
+<module>
+    from matplotlib._path 
+import (
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 28, in <module>
+    from keras import 
+visualization as 
+visualization
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\visual
+ization\__init__.py", line 
+13, in <module>
+    from keras.src.visualiz
+ation.plot_bounding_box_gal
+lery import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\vi
+sualization\plot_bounding_b
+ox_gallery.py", line 12, 
+in <module>
+    from matplotlib import 
+patches  # For legend 
+patches
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\_
+_init__.py", line 159, in 
+<module>
+    from . import _api, 
+_version, cbook, 
+_docstring, rcsetup
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\r
+csetup.py", line 28, in 
+<module>
+    from matplotlib.colors 
+import Colormap, 
+is_color_like
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\c
+olors.py", line 57, in 
+<module>
+    from matplotlib import 
+_api, _cm, cbook, scale
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\s
+cale.py", line 22, in 
+<module>
+    from matplotlib.ticker 
+import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\t
+icker.py", line 144, in 
+<module>
+    from matplotlib import 
+transforms as mtransforms
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\matplotlib\t
+ransforms.py", line 49, in 
+<module>
+    from matplotlib._path 
+import (
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 29, in <module>
+    from keras import 
+wrappers as wrappers
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\wrappe
+rs\__init__.py", line 7, 
+in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\__init__.py", line 
+1, in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import 
+SKLearnClassifier
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\sklearn_wrapper.py",
+ line 8, in <module>
+    from 
+keras.src.wrappers.fixes 
+import _routing_enabled
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\fixes.py", line 2, 
+in <module>
+    import sklearn
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\__in
+it__.py", line 84, in 
+<module>
+    from .base import clone
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\base
+.py", line 19, in <module>
+    from .utils._estimator_
+html_repr import _HTMLDocum
+entationLinkMixin, 
+estimator_html_repr
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\__init__.py", line 11, 
+in <module>
+    from ._chunking import 
+gen_batches, 
+gen_even_slices
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_chunking.py", line 8, 
+in <module>
+    from 
+._param_validation import 
+Interval, validate_params
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_param_validation.py", 
+line 11, in <module>
+    from scipy.sparse 
+import csr_matrix, issparse
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\__init__.py", line 295, 
+in <module>
+    from ._csr import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\_csr.py", line 11, in 
+<module>
+    from ._sparsetools 
+import (csr_tocsc, 
+csr_tobsr, 
+csr_count_blocks,
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 29, in <module>
+    from keras import 
+wrappers as wrappers
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\wrappe
+rs\__init__.py", line 7, 
+in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\__init__.py", line 
+1, in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import 
+SKLearnClassifier
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\sklearn_wrapper.py",
+ line 11, in <module>
+    from 
+keras.src.wrappers.utils 
+import TargetReshaper
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\utils.py", line 4, 
+in <module>
+    import sklearn
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\__in
+it__.py", line 84, in 
+<module>
+    from .base import clone
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\base
+.py", line 19, in <module>
+    from .utils._estimator_
+html_repr import _HTMLDocum
+entationLinkMixin, 
+estimator_html_repr
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\__init__.py", line 11, 
+in <module>
+    from ._chunking import 
+gen_batches, 
+gen_even_slices
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_chunking.py", line 8, 
+in <module>
+    from 
+._param_validation import 
+Interval, validate_params
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_param_validation.py", 
+line 11, in <module>
+    from scipy.sparse 
+import csr_matrix, issparse
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\__init__.py", line 295, 
+in <module>
+    from ._csr import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\_csr.py", line 11, in 
+<module>
+    from ._sparsetools 
+import (csr_tocsc, 
+csr_tobsr, 
+csr_count_blocks,
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 2, in <module>
+    import tensorflow as tf
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\tensorflow\_
+_init__.py", line 468, in 
+<module>
+    importlib.import_module
+("keras.src.optimizers")
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\__init
+__.py", line 7, in <module>
+    from keras import 
+_tf_keras as _tf_keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\__init__.py", line 1, 
+in <module>
+    from keras._tf_keras 
+import keras
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\_tf_ke
+ras\keras\__init__.py", 
+line 29, in <module>
+    from keras import 
+wrappers as wrappers
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\wrappe
+rs\__init__.py", line 7, 
+in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import (
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\__init__.py", line 
+1, in <module>
+    from keras.src.wrappers
+.sklearn_wrapper import 
+SKLearnClassifier
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\wr
+appers\sklearn_wrapper.py",
+ line 16, in <module>
+    import sklearn
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\__in
+it__.py", line 84, in 
+<module>
+    from .base import clone
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\base
+.py", line 19, in <module>
+    from .utils._estimator_
+html_repr import _HTMLDocum
+entationLinkMixin, 
+estimator_html_repr
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\__init__.py", line 11, 
+in <module>
+    from ._chunking import 
+gen_batches, 
+gen_even_slices
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_chunking.py", line 8, 
+in <module>
+    from 
+._param_validation import 
+Interval, validate_params
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\sklearn\util
+s\_param_validation.py", 
+line 11, in <module>
+    from scipy.sparse 
+import csr_matrix, issparse
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\__init__.py", line 295, 
+in <module>
+    from ._csr import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\sparse
+\_csr.py", line 11, in 
+<module>
+    from ._sparsetools 
+import (csr_tocsc, 
+csr_tobsr, 
+csr_count_blocks,
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+Loading data from data/training_data...
+Found 22208 images belonging to 30 classes.
+Found 5537 images belonging to 30 classes.
+2026-02-21 
+12:26:04.277057: I tensorfl
+ow/core/platform/cpu_featur
+e_guard.cc:210] This 
+TensorFlow binary is 
+optimized to use available 
+CPU instructions in 
+performance-critical 
+operations.
+To enable the following 
+instructions: SSE3 SSE4.1 
+SSE4.2 AVX AVX2 AVX_VNNI 
+FMA, in other operations, 
+rebuild TensorFlow with 
+the appropriate compiler 
+flags.
+
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+Traceback (most recent 
+call last):  File 
+"C:\Users\Syed Azaan Hussai
+n\DS_Project\src\train.py",
+ line 108, in <module>
+    train(args.data_dir)
+  File "C:\Users\Syed 
+Azaan Hussain\DS_Project\sr
+c\train.py", line 86, in 
+train
+    history = model.fit(
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\ut
+ils\traceback_utils.py", 
+line 117, in error_handler
+    return fn(*args, 
+**kwargs)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\ba
+ckend\tensorflow\trainer.py
+", line 360, in fit
+    epoch_iterator = 
+TFEpochIterator(
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\ba
+ckend\tensorflow\trainer.py
+", line 750, in __init__
+    dataset = self.data_ada
+pter.get_tf_dataset()
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\tr
+ainers\data_adapters\py_dat
+aset_adapter.py", line 
+307, in get_tf_dataset
+    self._standardize_batch
+(self.py_dataset[i])
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\le
+gacy\preprocessing\image.py
+", line 71, in __getitem__
+    return self._get_batche
+s_of_transformed_samples(in
+dex_array)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\le
+gacy\preprocessing\image.py
+", line 330, in _get_batche
+s_of_transformed_samples
+    x = self.image_data_gen
+erator.apply_transform(x, 
+params)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\le
+gacy\preprocessing\image.py
+", line 1411, in 
+apply_transform
+    x = 
+apply_affine_transform(
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\le
+gacy\preprocessing\image.py
+", line 1872, in 
+apply_affine_transform
+    scipy.ndimage.interpola
+tion.affine_transform(
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\ut
+ils\module_utils.py", line 
+36, in __getattr__
+    return 
+getattr(self.module, name)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\__init
+__.py", line 134, in 
+__getattr__
+    return _importlib.impor
+t_module(f'scipy.{name}')
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\ndimag
+e\__init__.py", line 152, 
+in <module>
+    from ._filters import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\ndimag
+e\_filters.py", line 39, 
+in <module>
+    from . import _nd_image
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\numpy\core\_
+multiarray_umath.py", line 
+44, in __getattr__
+    raise ImportError(msg)
+ImportError: 
+A module that was compiled 
+using NumPy 1.x cannot be 
+run in
+NumPy 2.2.6 as it may 
+crash. To support both 1.x 
+and 2.x
+versions of NumPy, modules 
+must be compiled with 
+NumPy 2.0.
+Some module may need to 
+rebuild instead e.g. with 
+'pybind11>=2.12'.
+
+If you are a user of the 
+module, the easiest 
+solution will be to
+downgrade to 'numpy<2' or 
+try to upgrade the 
+affected module.
+We expect that some 
+modules will need time to 
+support NumPy 2.
+
+
+Traceback (most recent 
+call last):
+  File "C:\Users\Syed 
+Azaan Hussain\DS_Project\sr
+c\train.py", line 108, in 
+<module>
+    train(args.data_dir)
+  File "C:\Users\Syed 
+Azaan Hussain\DS_Project\sr
+c\train.py", line 86, in 
+train
+    history = model.fit(
+              ^^^^^^^^^^
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\keras\src\ut
+ils\traceback_utils.py", 
+line 122, in error_handler
+Found 30 classes: ['Apple___Formalin-mixed', 'Apple___Fresh', 'Apple___Rotten', 'Banana___Formalin-mixed', 'Banana___Fresh', 'Banana___Rotten', 'Grape___Formalin-mixed', 'Grape___Fresh', 'Grape___Rotten', 'Mango___Formalin-mixed', 'Mango___Fresh', 'Mango___Rotten', 'Orange___Formalin-mixed', 'Orange___Fresh', 'Orange___Rotten', 'Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy', 'Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
+Starting training...
+    raise e.with_traceback(
+filtered_tb) from None
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\__init
+__.py", line 134, in 
+__getattr__
+    return _importlib.impor
+t_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\importlib\__init__.py", 
+line 90, in import_module
+    return _bootstrap._gcd_
+import(name[level:], 
+package, level)
+           ^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^
+  File "<frozen 
+importlib._bootstrap>", 
+line 1387, in _gcd_import
+  File "<frozen 
+importlib._bootstrap>", 
+line 1360, in 
+_find_and_load
+  File "<frozen 
+importlib._bootstrap>", 
+line 1331, in 
+_find_and_load_unlocked
+  File "<frozen 
+importlib._bootstrap>", 
+line 935, in _load_unlocked
+  File "<frozen importlib._
+bootstrap_external>", line 
+995, in exec_module
+  File "<frozen 
+importlib._bootstrap>", 
+line 488, in 
+_call_with_frames_removed
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\ndimag
+e\__init__.py", line 152, 
+in <module>
+    from ._filters import *
+  File "C:\Users\Syed 
+Azaan Hussain\anaconda3\Lib
+\site-packages\scipy\ndimag
+e\_filters.py", line 39, 
+in <module>
+    from . import _nd_image
+ImportError: 
+numpy.core.multiarray 
+failed to import

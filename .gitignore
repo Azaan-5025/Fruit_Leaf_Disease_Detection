@@ -1,0 +1,15 @@
+data/
+models/
+presentation_assets/
+review_assets/
+*.h5
+*.pptx
+*.pkl
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.streamlit/
+!class_names.txt
+!requirements.txt
